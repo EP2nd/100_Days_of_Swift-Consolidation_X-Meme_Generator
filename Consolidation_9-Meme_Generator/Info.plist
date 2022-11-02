@@ -21,5 +21,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need your permission to access the images of your choosing from your Photo Library.</string>
 </dict>
 </plist>
