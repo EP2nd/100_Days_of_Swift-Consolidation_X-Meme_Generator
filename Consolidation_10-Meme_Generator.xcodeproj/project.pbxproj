@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B8D9196B2911A6CD00788BB6 /* Consolidation_9-Meme_Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Consolidation_9-Meme_Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8D9196B2911A6CD00788BB6 /* Consolidation_10-Meme_Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Consolidation_10-Meme_Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8D9196E2911A6CD00788BB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8D919702911A6CD00788BB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B8D919722911A6CD00788BB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		B8D9196C2911A6CD00788BB6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B8D9196B2911A6CD00788BB6 /* Consolidation_9-Meme_Generator.app */,
+				B8D9196B2911A6CD00788BB6 /* Consolidation_10-Meme_Generator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B8D9196A2911A6CD00788BB6 /* Consolidation_9-Meme_Generator */ = {
+		B8D9196A2911A6CD00788BB6 /* Consolidation_10-Meme_Generator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B8D9197F2911A6CF00788BB6 /* Build configuration list for PBXNativeTarget "Consolidation_9-Meme_Generator" */;
+			buildConfigurationList = B8D9197F2911A6CF00788BB6 /* Build configuration list for PBXNativeTarget "Consolidation_10-Meme_Generator" */;
 			buildPhases = (
 				B8D919672911A6CD00788BB6 /* Sources */,
 				B8D919682911A6CD00788BB6 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = "Consolidation_9-Meme_Generator";
+			name = "Consolidation_10-Meme_Generator";
 			productName = "Consolidation_9-Meme_Generator";
-			productReference = B8D9196B2911A6CD00788BB6 /* Consolidation_9-Meme_Generator.app */;
+			productReference = B8D9196B2911A6CD00788BB6 /* Consolidation_10-Meme_Generator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B8D919662911A6CD00788BB6 /* Build configuration list for PBXProject "Consolidation_9-Meme_Generator" */;
+			buildConfigurationList = B8D919662911A6CD00788BB6 /* Build configuration list for PBXProject "Consolidation_10-Meme_Generator" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B8D9196A2911A6CD00788BB6 /* Consolidation_9-Meme_Generator */,
+				B8D9196A2911A6CD00788BB6 /* Consolidation_10-Meme_Generator */,
 			);
 		};
 /* End PBXProject section */
@@ -295,6 +295,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +324,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,7 +341,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B8D919662911A6CD00788BB6 /* Build configuration list for PBXProject "Consolidation_9-Meme_Generator" */ = {
+		B8D919662911A6CD00788BB6 /* Build configuration list for PBXProject "Consolidation_10-Meme_Generator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B8D9197D2911A6CF00788BB6 /* Debug */,
@@ -348,7 +350,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B8D9197F2911A6CF00788BB6 /* Build configuration list for PBXNativeTarget "Consolidation_9-Meme_Generator" */ = {
+		B8D9197F2911A6CF00788BB6 /* Build configuration list for PBXNativeTarget "Consolidation_10-Meme_Generator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B8D919802911A6CF00788BB6 /* Debug */,
