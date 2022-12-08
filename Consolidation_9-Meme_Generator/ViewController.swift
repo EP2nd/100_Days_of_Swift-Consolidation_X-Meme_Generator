@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
     @IBOutlet var imageView: UIImageView!
     
     var shareButton: UIBarButtonItem!
@@ -15,23 +16,30 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     var topLineText: String?
     var bottomLineText: String?
+    
     var currentImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Meme Generator"
+        
         navigationController?.navigationBar.prefersLargeTitles = true
         
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         let importButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addImage))
+        
         navigationItem.rightBarButtonItems = [spacer, importButton]
         
         shareButton = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareImage))
+        
         editButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editImage))
+        
         shareButton.isEnabled = false
         editButton.isEnabled = false
+        
         toolbarItems = [shareButton, spacer, editButton]
+        
         navigationController?.isToolbarHidden = false
         
         drawWelcomeScreen()
@@ -39,30 +47,37 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     @objc func addImage() {
         let picker = UIImagePickerController()
+        
         picker.delegate = self
+        
         present(picker, animated: true)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
         guard let image = info[.originalImage] as? UIImage else { return }
         
         dismiss(animated: true)
         
         imageView.image = image
         currentImage = image
+        
         shareButton.isEnabled = true
         editButton.isEnabled = true
     }
     
     @objc func shareImage() {
+        
         guard let image = imageView.image?.jpegData(compressionQuality: 0.8) else { return }
         
         let vc = UIActivityViewController(activityItems: [image], applicationActivities: [])
         vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        
         present(vc, animated: true)
     }
     
     @objc func editImage() {
+        
         let ac = UIAlertController(title: "Top and bottom lines", message: "Please type in top and bottom line texts. If you need only one of the lines, please leave the other one blank.", preferredStyle: .alert)
         ac.addTextField()
         ac.addTextField()
@@ -76,10 +91,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             
             self?.drawMeme()
         })
+        
         present(ac, animated: true)
     }
     
     func drawMeme() {
+        
         guard let image = currentImage else { return }
         
         let renderer = UIGraphicsImageRenderer(size: image.size)
@@ -104,6 +121,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             let bottomLineString = bottomLineText
             
             let attributedTopString = NSAttributedString(string: topLineString!, attributes: attributes)
+            
             let attributedBottomString = NSAttributedString(string: bottomLineString!, attributes: attributes)
             
             let stringWidth = Int((image.size.width) / 6) * 2
@@ -112,16 +130,20 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             let bottomTextY = Int((image.size.height / 8) * 7)
             
             attributedTopString.draw(with: CGRect(x: textX, y: topTextY, width: stringWidth, height: 100), context: nil)
+            
             attributedBottomString.draw(with: CGRect(x: textX, y: bottomTextY, width: stringWidth, height: 100), context: nil)
         }
+        
         imageView.image = meme
     }
     
     func drawWelcomeScreen() {
+        
         let imageViewSize = imageView.frame.size
         let renderer = UIGraphicsImageRenderer(size: imageViewSize)
         
         let welcomeScreen = renderer.image { ctx in
+            
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.alignment = .center
             
@@ -140,6 +162,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             
             attributedString.draw(with: CGRect(x: marginSize, y: stringY, width: stringWidth, height: 32), options: .usesLineFragmentOrigin, context: nil)
         }
+        
         imageView.image = welcomeScreen
     }
 }

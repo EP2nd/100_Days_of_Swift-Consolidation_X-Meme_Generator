@@ -60,9 +60,9 @@
 				B8D919702911A6CD00788BB6 /* SceneDelegate.swift */,
 				B8D919722911A6CD00788BB6 /* ViewController.swift */,
 				B8D919742911A6CD00788BB6 /* Main.storyboard */,
-				B8D919772911A6CF00788BB6 /* Assets.xcassets */,
 				B8D919792911A6CF00788BB6 /* LaunchScreen.storyboard */,
 				B8D9197C2911A6CF00788BB6 /* Info.plist */,
+				B8D919772911A6CF00788BB6 /* Assets.xcassets */,
 			);
 			path = "Consolidation_9-Meme_Generator";
 			sourceTree = "<group>";
